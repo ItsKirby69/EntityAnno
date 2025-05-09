@@ -34,7 +34,7 @@ import static javax.lang.model.type.TypeKind.*;
 public class EntityProcessor extends BaseProcessor{
     private static final Seq<MethodSymbol> tmpMethods = new Seq<>();
     private static final Seq<Object> tmpArgs = new Seq<>();
-    private static final Comparator<MethodSymbol> methodSorter = Structs.comps(Structs.comparingInt(m -> {
+    private static final Comparator<MethodSymbol> methodSorter = Structs.comps(Structs.comparingFloat(m -> {
         var priority = anno(m, MethodPriority.class);
         return priority == null ? 0 : priority.value();
     }), Structs.comparing(BaseProcessor::name));
@@ -497,7 +497,7 @@ public class EntityProcessor extends BaseProcessor{
                         if(topReplacer != null && (topReplace = anno(topReplacer, Replace.class)) != null){
                             setter = null;
 
-                            int max = topReplace.value();
+                            float max = topReplace.value();
                             if(topReplacer.getReturnType().getKind() == VOID){
                                 entries.removeAll(m -> {
                                     var rep = anno(m, Replace.class);

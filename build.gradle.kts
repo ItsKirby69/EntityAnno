@@ -59,7 +59,7 @@ allprojects{
         mavenCentral()
         maven("https://oss.sonatype.org/content/repositories/snapshots/")
         maven("https://oss.sonatype.org/content/repositories/releases/")
-        maven("https://raw.githubusercontent.com/Zelaux/MindustryRepo/master/repository")
+        maven("https://maven.xpdustry.com/mindustry")
         maven("https://jitpack.io")
     }
 

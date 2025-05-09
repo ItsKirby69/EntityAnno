@@ -95,7 +95,7 @@ public final class Annotations{
     @Retention(RetentionPolicy.SOURCE)
     public @interface Replace{
         /** @return The priority of this replacer. */
-        int value() default 0;
+        float value() default 0f;
     }
 
     /** Whether this method is implemented in compile-time. */
@@ -108,7 +108,7 @@ public final class Annotations{
     @Retention(RetentionPolicy.SOURCE)
     public @interface MethodPriority{
         /** @return The priority. */
-        int value();
+        float value();
     }
 
     /** Appends this {@code add()}/{@code remove()} method before the {@code if([!]added)} check. */

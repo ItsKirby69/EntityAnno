@@ -29,7 +29,7 @@ fun kotlinPlugin(module: String): String{
 
 fun commonPom(pom: MavenPom){
     pom.apply{
-        url = "https://github.com/GglLfr/EntityAnno"
+        url = "https://github.com/ItsKirby69/EntityAnno"
         inceptionYear = "2024"
 
         licenses{
@@ -42,7 +42,7 @@ fun commonPom(pom: MavenPom){
 
         issueManagement{
             system = "GitHub Issue Tracker"
-            url = "https://github.com/GglLfr/EntityAnno/issues"
+            url = "https://github.com/ItsKirby69/EntityAnno/issues"
         }
     }
 }
@@ -52,14 +52,14 @@ allprojects{
     apply(plugin = "maven-publish")
 
     sourceSets["main"].java.setSrcDirs(listOf(layout.projectDirectory.dir("src")))
-    group = "com.github.GglLfr.EntityAnno"
+    group = "com.github.ItsKirby69.EntityAnno"
 
     repositories{
         google()
         mavenCentral()
         maven("https://oss.sonatype.org/content/repositories/snapshots/")
         maven("https://oss.sonatype.org/content/repositories/releases/")
-        maven("https://maven.xpdustry.com/mindustry")
+        maven("https://maven.xpdustry.com/#/mindustry")
         maven("https://jitpack.io")
     }
 
@@ -145,14 +145,14 @@ project(":entity"){
 project(":"){
     apply(plugin = "java-gradle-plugin")
 
-    group = "com.github.GglLfr"
+    group = "com.github.ItsKirby69"
 
     lateinit var plugin: Provider<PluginDeclaration>
     gradlePlugin{
         isAutomatedPublishing = false
 
         plugin = plugins.register("entityAnno"){
-            id = "com.github.GglLfr.EntityAnno"
+            id = "com.github.ItsKirby69.EntityAnno"
             displayName = "EntityAnno"
             description = "Utility tools for generating Mindustry custom entity component classes."
             implementationClass = "ent.EntityAnnoPlugin"

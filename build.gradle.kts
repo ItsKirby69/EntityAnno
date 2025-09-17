@@ -122,6 +122,9 @@ project(":downgrader"){
             commonPom(this)
         }
     }
+    tasks.withType<Javadoc>().configureEach {
+        enabled = false
+    }
 }
 
 project(":entity"){

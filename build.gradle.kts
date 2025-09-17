@@ -84,19 +84,20 @@ allprojects{
     }
 
     tasks.withType<Javadoc>().configureEach{
-        options{
-            encoding = "UTF-8"
+        enabled = false
+        // options{
+        //     encoding = "UTF-8"
 
-            val exports = (project.property("org.gradle.jvmargs") as String)
-                .split(Regex("\\s+"))
-                .filter{it.startsWith("--add-opens")}
-                .map{"--add-exports ${it.substring("--add-opens=".length)}"}
-                .reduce{accum, arg -> "$accum $arg"}
+        //     val exports = (project.property("org.gradle.jvmargs") as String)
+        //         .split(Regex("\\s+"))
+        //         .filter{it.startsWith("--add-opens")}
+        //         .map{"--add-exports ${it.substring("--add-opens=".length)}"}
+        //         .reduce{accum, arg -> "$accum $arg"}
 
-            val opts = File(temporaryDir, "exports.options")
-            BufferedWriter(FileWriter(opts, Charsets.UTF_8, false)).use{it.write("-Xdoclint:none $exports")}
-            optionFiles(opts)
-        }
+        //     val opts = File(temporaryDir, "exports.options")
+        //     BufferedWriter(FileWriter(opts, Charsets.UTF_8, false)).use{it.write("-Xdoclint:none $exports")}
+        //     optionFiles(opts)
+        // }
     }
 }
 
@@ -121,9 +122,6 @@ project(":downgrader"){
             description = "Java 9+ syntax availability in Java 8, which is necessary for Mindustry mods."
             commonPom(this)
         }
-    }
-    tasks.withType<Javadoc>().configureEach {
-        enabled = false
     }
 }
 
@@ -161,7 +159,11 @@ project(":"){
             implementationClass = "ent.EntityAnnoPlugin"
         }
     }
-
+    
+    tasks.withType<Javadoc>().configureEach {
+        enabled = false
+    }
+    
     publishing.publications{
         fun applyPom(pom: MavenPom){
             pom.apply{

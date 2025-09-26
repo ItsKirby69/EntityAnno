@@ -1,8 +1,8 @@
 # `EntityAnno`
 Utility tools for generating [`Mindustry`](https://github.com/Anuken/Mindustry)
-custom entity component classes. Updated for v151
+custom entity component classes. Updated for v151.
 
-This is a temporary fork of [`GglLfr's repository`](https://github.com/GglLfr/EntityAnno) as mods that utilize the template with [EntityAnno](https://github.com/GglLfr/ integrated are stuck in v149 and below.
+This is a temporary fork of [`GglLfr's repository`](https://github.com/GglLfr/EntityAnno) as mods that utilize the template with [EntityAnno](https://github.com/GglLfr) integrated are stuck in v149 and below.
 
 This is not meant for production use as there are several changes (aside from **entVersion** in `gradle.properties) that you'd need to make to properly utilize this fork. 
 

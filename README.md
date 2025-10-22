@@ -60,7 +60,7 @@ This project is licensed under [GNU GPL v3](/LICENSE).
 ## Version Compatibility
 | `Mindustry`/`Arc` | `EntityAnno`  | `Use this fork?` |
 |-------------------|---------------|------------------|
-| `v150-v151`       | `v151.0.2`    |   Yes            |
+| `v150`-`v15X`     | `v151.0.2`    |   Should work            |
 | `v147`-`v149`     | `v149.0.0`    |   Prefer original            |
 | `v146`            | `v146.0.11`   |   Prefer original            |
 | `v145`            | `1.1.2`       |   Prefer original            |

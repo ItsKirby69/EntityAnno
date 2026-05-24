@@ -20,7 +20,6 @@ import javax.annotation.processing.*;
 import javax.lang.model.element.*;
 import java.io.*;
 import java.lang.*;
-import java.lang.Class;
 import java.util.*;
 
 import static javax.lang.model.element.ElementKind.*;
@@ -660,7 +659,7 @@ public class EntityProcessor extends BaseProcessor{
                         if(hasIO){
                             if(io == null) io = new EntityIO(this, name, builder, allFieldSpecs, serializer, revDir.child(name));
                             if((mname.equals("read") || mname.equals("write"))){
-                                io.write(methBuilder, mname.equals("write"));
+                                io.write(methBuilder, mname.equals("write"), allFields);
                             }
 
                             if((mname.equals("readSync") || mname.equals("writeSync"))){

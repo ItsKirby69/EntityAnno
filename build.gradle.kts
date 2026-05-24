@@ -152,7 +152,7 @@ project(":"){
         isAutomatedPublishing = false
 
         plugin = plugins.register("entityAnno"){
-            id = "com.github.GglLfr.EntityAnno"
+            id = "com.github.ItsKirby69.EntityAnno"
             displayName = "EntityAnno"
             description = "Utility tools for generating Mindustry custom entity component classes."
             implementationClass = "ent.EntityAnnoPlugin"

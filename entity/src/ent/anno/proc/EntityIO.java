@@ -13,6 +13,8 @@ import ent.anno.TypeIOResolver.*;
 import mindustry.*;
 import mindustry.ctype.*;
 
+import java.lang.annotation.*;
+
 import static ent.anno.BaseProcessor.*;
 import static javax.lang.model.element.Modifier.*;
 

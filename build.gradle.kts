@@ -52,7 +52,7 @@ allprojects{
     apply(plugin = "maven-publish")
 
     sourceSets["main"].java.setSrcDirs(listOf(layout.projectDirectory.dir("src")))
-    group = "com.github.GglLfr.EntityAnno"
+    group = "com.github.ItsKirby69.EntityAnno"
 
     repositories{
         google()
@@ -145,7 +145,7 @@ project(":entity"){
 project(":"){
     apply(plugin = "java-gradle-plugin")
 
-    group = "com.github.GglLfr"
+    group = "com.github.ItsKirby69"
 
     lateinit var plugin: Provider<PluginDeclaration>
     gradlePlugin{

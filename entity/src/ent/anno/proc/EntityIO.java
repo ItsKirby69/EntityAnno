@@ -72,7 +72,7 @@ public class EntityIO{
         }
     }
 
-    public void write(MethodSpec.Builder method, boolean write, Seq<Svar> allFields){
+    public void write(MethodSpec.Builder method, boolean write, Seq<VarSymbol> allFields){
         this.method = method;
         this.write = write;
 
@@ -103,12 +103,12 @@ public class EntityIO{
         }
     }
 
-    boolean fieldHasAnno(RevisionField field, Seq<Svar> allFields, Class<? extends Annotation> type){
-        Svar var = allFields.find(s -> s.name().equals(field.name));
+    boolean fieldHasAnno(RevisionField field, Seq<VarSymbol> allFields, Class<? extends Annotation> type){
+        VarSymbol var = allFields.find(s -> s.name().equals(field.name));
         return var != null && var.has(type);
     }
 
-    public void writeSync(MethodSpec.Builder method, boolean write, Seq<Svar> allFields){
+    public void writeSync(MethodSpec.Builder method, boolean write, Seq<VarSymbol> allFields){
         this.method = method;
         this.write = write;
 

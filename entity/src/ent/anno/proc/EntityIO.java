@@ -106,8 +106,8 @@ public class EntityIO{
     }
 
     boolean fieldHasAnno(RevisionField field, Seq<VarSymbol> allFields, Class<? extends Annotation> type){
-        VarSymbol var = allFields.find(s -> s.name().equals(field.name));
-        return var != null && var.has(type);
+        VarSymbol var = allFields.find(s -> s.name.toString().equals(field.name));
+        return var != null && var.getAnnotation(type) != null;
     }
 
     public void writeSync(MethodSpec.Builder method, boolean write, Seq<VarSymbol> allFields){
